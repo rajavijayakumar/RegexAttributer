@@ -19,6 +19,9 @@
 		88BB5D402532DAC4000FCB5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BB5D3E2532DAC4000FCB5C /* LaunchScreen.storyboard */; };
 		88BB5D4B2532DAC5000FCB5C /* RegexAttributerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D4A2532DAC5000FCB5C /* RegexAttributerExampleTests.swift */; };
 		88BB5D562532DAC5000FCB5C /* RegexAttributerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D552532DAC5000FCB5C /* RegexAttributerExampleUITests.swift */; };
+		88BB5D672532E047000FCB5C /* RegexAttributer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D662532E047000FCB5C /* RegexAttributer.swift */; };
+		88BB5D6E2532E063000FCB5C /* RegexAttributerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D6D2532E063000FCB5C /* RegexAttributerType.swift */; };
+		88BB5D752532E07D000FCB5C /* RegexAttributerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D742532E07D000FCB5C /* RegexAttributerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		88BB5D512532DAC5000FCB5C /* RegexAttributerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegexAttributerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BB5D552532DAC5000FCB5C /* RegexAttributerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributerExampleUITests.swift; sourceTree = "<group>"; };
 		88BB5D572532DAC5000FCB5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88BB5D662532E047000FCB5C /* RegexAttributer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributer.swift; sourceTree = "<group>"; };
+		88BB5D6D2532E063000FCB5C /* RegexAttributerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributerType.swift; sourceTree = "<group>"; };
+		88BB5D742532E07D000FCB5C /* RegexAttributerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,9 @@
 			children = (
 				88BB5D112532D9E1000FCB5C /* RegexAttributer.h */,
 				88BB5D122532D9E1000FCB5C /* Info.plist */,
+				88BB5D662532E047000FCB5C /* RegexAttributer.swift */,
+				88BB5D6D2532E063000FCB5C /* RegexAttributerType.swift */,
+				88BB5D742532E07D000FCB5C /* RegexAttributerManager.swift */,
 			);
 			path = RegexAttributer;
 			sourceTree = "<group>";
@@ -298,6 +307,7 @@
 				TargetAttributes = {
 					88BB5D0D2532D9E1000FCB5C = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 					88BB5D162532D9E2000FCB5C = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -383,6 +393,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BB5D672532E047000FCB5C /* RegexAttributer.swift in Sources */,
+				88BB5D752532E07D000FCB5C /* RegexAttributerManager.swift in Sources */,
+				88BB5D6E2532E063000FCB5C /* RegexAttributerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +599,7 @@
 		88BB5D232532D9E2000FCB5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -601,6 +615,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raja.RegexAttributer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -609,6 +624,7 @@
 		88BB5D242532D9E2000FCB5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -632,6 +648,7 @@
 		88BB5D262532D9E2000FCB5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RegexAttributerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -649,6 +666,7 @@
 		88BB5D272532D9E2000FCB5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RegexAttributerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
