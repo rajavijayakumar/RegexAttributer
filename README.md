@@ -110,7 +110,7 @@ RegexAttributor is available in Cocoapods. Add this to your podfile
 
 use_frameworks!
 
-	pod 'RegexAttributor'
+	pod 'RegexAttributer', '~> 1.0'
   
 end
 
