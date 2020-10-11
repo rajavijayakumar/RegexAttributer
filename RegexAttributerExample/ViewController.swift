@@ -41,10 +41,16 @@ enum RegexAttributerType: RegexAttributable {
 	
 	var regex: String {
 		switch self {
+			
+			// **Bold**
 			case .bold:
 				return "\\*\\*(?<X>.*?)\\*\\*"
+				
+			// #Highlighter
 			case .highlight:
 				return "\\#(?<X>.*?).\\h"
+				
+			// [Click Here](https://www.google.com/)
 			case .url:
 				return "(\\[(?<X>.*?)\\])(\\()(http|https)?:\\/\\/([-\\w\\.]+)+(:\\d+)?(\\/([\\w|\\-\\/_\\.]*(\\?\\S+)?)?)?(\\))"
 		}
@@ -66,13 +72,22 @@ enum RegexAttributerType: RegexAttributable {
 	func generateTextRange(_ string: String) -> (String, String) {
 		
 		switch self {
+			
+			// **Bold** -> (Bold, Bold)
 			case .bold:
 				var boldString = string
 				boldString.removeFirst(2)
 				boldString.removeLast(2)
 				return (boldString, boldString)
+				
+			// #Highlight -> (#Highlight, #Highlight)
 			case .highlight:
 				return (string, string)
+			
+			// [Click Here](https://www.google.com/) -> (Click Here, https://www.google.com/)
+			// Click Here will be replaced in place of this regex and the url will be available in two places
+			// RegexAttributerManager.getTextRanges(for key:) [NSRange(location: 0, length: 10): "https://www.google.com/"]
+			// RegexAttributerManager.getAbsoluteValues(for key:) ["https://www.google.com/": "Click Here"]
 			case .url:
 				let splitedUrl = TextHightlighterHelper().splitUrl(from: string)
 				return (splitedUrl.absoluteUrl, splitedUrl.prefix)

@@ -22,6 +22,8 @@
 		88BB5D672532E047000FCB5C /* RegexAttributer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D662532E047000FCB5C /* RegexAttributer.swift */; };
 		88BB5D6E2532E063000FCB5C /* RegexAttributerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D6D2532E063000FCB5C /* RegexAttributerType.swift */; };
 		88BB5D752532E07D000FCB5C /* RegexAttributerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BB5D742532E07D000FCB5C /* RegexAttributerManager.swift */; };
+		88BB5DA725330414000FCB5C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 88BB5DA625330414000FCB5C /* README.md */; };
+		88BB5DAE2533041F000FCB5C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 88BB5DAD2533041F000FCB5C /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		88BB5D662532E047000FCB5C /* RegexAttributer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributer.swift; sourceTree = "<group>"; };
 		88BB5D6D2532E063000FCB5C /* RegexAttributerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributerType.swift; sourceTree = "<group>"; };
 		88BB5D742532E07D000FCB5C /* RegexAttributerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributerManager.swift; sourceTree = "<group>"; };
+		88BB5DA625330414000FCB5C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		88BB5DAD2533041F000FCB5C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 		88BB5D042532D9E1000FCB5C = {
 			isa = PBXGroup;
 			children = (
+				88BB5DAD2533041F000FCB5C /* LICENSE */,
+				88BB5DA625330414000FCB5C /* README.md */,
 				88BB5D102532D9E1000FCB5C /* RegexAttributer */,
 				88BB5D1B2532D9E2000FCB5C /* RegexAttributerTests */,
 				88BB5D2F2532DAC2000FCB5C /* RegexAttributerExample */,
@@ -360,6 +366,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BB5DAE2533041F000FCB5C /* LICENSE in Resources */,
+				88BB5DA725330414000FCB5C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
