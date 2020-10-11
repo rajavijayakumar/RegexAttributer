@@ -5,11 +5,11 @@
 //  Created by raja vijaya kumar on 11/10/20.
 //
 
-import UIKit
+import Foundation
 
 public protocol RegexAttributable {
 	var regex: String { get }
-	var attributes: [NSAttributedString.Key: Any] { get }
+	var attributes: Attributes { get }
 	func generateTextRange(_ string: String) -> (String, String)
 }
 
@@ -20,7 +20,7 @@ internal protocol RegexAttributerProtocol {
 	func getGeneratedDifference() -> [Int]
 	func getReplaceableRanges() -> [NSRange]
 	func getReplacedString() -> String
-	func getAttributes() -> [NSAttributedString.Key: Any]
+	func getAttributes() -> Attributes
 	func generateRangeTexts(adjustedRanges: [NSRange]) -> [NSRange: String]
 }
 
@@ -88,7 +88,7 @@ internal class RegexAttributer<T: Hashable & RegexAttributable>: RegexAttributer
 		return replacedString
 	}
 	
-	internal func getAttributes() -> [NSAttributedString.Key: Any] {
+	internal func getAttributes() -> Attributes {
 		return textHightlightable.attributes
 	}
 	

@@ -5,13 +5,15 @@
 //  Created by raja vijaya kumar on 11/10/20.
 //
 
-import UIKit
+import Foundation
+
+public typealias Attributes = [NSAttributedString.Key: Any]
 
 public enum RegexAttributerType: RegexAttributable {
 	
-	case bold(size: CGFloat)
-	case highlight(size: CGFloat)
-	case url
+	case bold(attributes: Attributes)
+	case highlight(attributes: Attributes)
+	case url(attributes: Attributes)
 	
 	
 	// Delegate methods
@@ -28,14 +30,12 @@ public enum RegexAttributerType: RegexAttributable {
 	
 	public var attributes: [NSAttributedString.Key : Any] {
 		switch self {
-			case .bold(let size):
-				return [.font: UIFont.boldSystemFont(ofSize: size)]
-			case .highlight(let size):
-				return [.font: UIFont.boldSystemFont(ofSize: size),
-						.foregroundColor: UIColor.black]
-			case .url:
-				return [.foregroundColor: UIColor.blue,
-						.underlineStyle: NSUnderlineStyle.styleThick.rawValue]
+			case .bold(let attributes):
+				return attributes
+			case .highlight(let attributes):
+				return attributes
+			case .url(let attributes):
+				return attributes
 		}
 	}
 	
