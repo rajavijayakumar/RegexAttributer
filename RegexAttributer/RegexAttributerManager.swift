@@ -23,7 +23,7 @@ open class RegexAttributerManager<T: Hashable & RegexAttributable> {
 	private var rawRanges: [T: [NSRange]] = [:]
 	private var textRanges: [T: [NSRange: String]] = [:]
 	
-	init(string: String, textHighlightable: Set<T>, initialAttributes: Attributes = [:]) {
+	public init(string: String, textHighlightable: Set<T>, initialAttributes: Attributes = [:]) {
 		self.string = string
 		self.textHighlightable = textHighlightable
 		
@@ -75,7 +75,7 @@ open class RegexAttributerManager<T: Hashable & RegexAttributable> {
 	}
 	
 	private func addAttr(range: NSRange, attr: Attributes) {
-		guard (range.location + range.length) < attributedString.string.count else { return }
+		guard (range.location + range.length) <= attributedString.string.count else { return }
 		attributedString.addAttributes(attr, range: range)
 	}
 	
