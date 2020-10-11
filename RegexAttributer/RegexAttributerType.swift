@@ -35,7 +35,7 @@ public enum RegexAttributerType: RegexAttributable {
 						.foregroundColor: UIColor.black]
 			case .url:
 				return [.foregroundColor: UIColor.blue,
-						.underlineStyle: NSUnderlineStyle.thick.rawValue]
+						.underlineStyle: NSUnderlineStyle.styleThick.rawValue]
 		}
 	}
 	
