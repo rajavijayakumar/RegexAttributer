@@ -120,4 +120,4 @@ and run pod install.
 
 ## License
 
-RegexAttributer is released under an MIT license. See [License.md](https://github.com/rajavijayakumar/RegexAttributer/blob/main/LICENSE.md) for more information.
+RegexAttributer is released under an MIT license. See [License.md](https://github.com/rajavijayakumar/RegexAttributer/blob/main/LICENSE) for more information.
