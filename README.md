@@ -5,7 +5,7 @@ RegexAttributer is a simple, light weight attributed string generator based on t
 As mobile developers we may have needed to perform regex validation on a string and give some other attributes for that particular match alone in our projects. (i.e):- This should be rendered as ##Bold##. -> This should be renderd as **Bold**.
 
 And sometimes we may need to add some action based on the regex highlighted string we have rendered.
-(i.e):- [Click Here](https://www.google.com) to view the website. -> **Click Here** to view the website.
+(i.e):- {Click Here}(https://www.google.com) to view the website. -> [Click Here](https://www.google.com) to view the website.
 
 This is where RegexAttributer comes in handy.
 
