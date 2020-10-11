@@ -102,7 +102,7 @@ textView.attributedText = regexManager.getAttributedString()
 
 ```
 
-#Installation Guide
+# Installation Guide
 
 RegexAttributor is available in Cocoapods. Add this to your podfile
 
@@ -118,6 +118,6 @@ end
 
 and run pod install.
 
-##License
+## License
 
 RegexAttributer is released under an MIT license. See [License.md](https://github.com/rajavijayakumar/RegexAttributer/blob/main/LICENSE.md) for more information.
