@@ -110,7 +110,7 @@ RegexAttributor is available in Cocoapods. Add this to your podfile
 
 use_frameworks!
 
-	pod 'Moya', '~> 13.0'
+	pod 'RegexAttributor'
   
 end
 
